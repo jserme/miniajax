@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ajax test</title>
+    <script src="ajax.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+  <div id="log">
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    function log( msg ){
+      document.getElementById('log').innerHTML += '<br>' + msg  
+    }
+
+    ajax({
+      url:'./get',
+      onSuccess: function(data){
+        if(data == 'ok') {
+          log('get is ok')
+        }
+      }
+    })
+
+    ajax({
+      type:'POST',
+      url:'./post',
+      data:'test=ok&hello=world',
+      onSuccess: function(data){
+        if(data == 'ok') {
+          log('post is ok')
+        }
+      }
+    })
+  </script>
+  </body>
+</html>
