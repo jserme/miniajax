@@ -15,7 +15,7 @@
     xhr.open(config.type, config.url, true);
 
     if (config.type === 'POST') {
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.setRequestHeader("Content-Type", config.contentType || "application/x-www-form-urlencoded");
     }
 
     xhr.send(config.data || null);
