@@ -2,6 +2,8 @@
 
 ## useage
 ```javascript
+//browser
+var ajax = window.returnExports.ajax
 //get
 ajax({
   url: 'xxxx',

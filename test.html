@@ -14,6 +14,8 @@
       document.getElementById('log').innerHTML += '<br>' + msg  
     }
 
+    var ajax = window.returnExports.ajax
+
     ajax({
       url:'./get',
       onSuccess: function(data){
