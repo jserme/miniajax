@@ -16,8 +16,8 @@ app.get('/', function(req, res) {
   }));
 });
 
-app.get('/ajax.js', function(req, res) {
-  res.send(fs.readFileSync('./ajax.js', {
+app.get('/index.js', function(req, res) {
+  res.send(fs.readFileSync('./index.js', {
     encoding: 'utf-8'
   }));
 });

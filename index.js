@@ -1,4 +1,12 @@
-(function(output) {
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define([], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory();
+  } else {
+    root.returnExports = factory();
+  }
+}(this, function() {
   var createXHR = function() {
     try {
       return new window.XMLHttpRequest();
@@ -7,7 +15,7 @@
     }
   }
 
-  var ajax = output.ajax = function(config) {
+  var ajax = function(config) {
     config.type = (config.type || 'GET').toUpperCase()
 
     var xhr = createXHR();
@@ -26,4 +34,8 @@
       }
     }
   }
-})(this)
+
+  return {
+    ajax: ajax
+  }
+}));
