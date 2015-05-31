@@ -1,6 +1,11 @@
 # micro ajax
 
 ## useage
+
+```
+npm install miniajax
+```
+
 ```javascript
 //browser
 var ajax = window.returnExports.ajax
