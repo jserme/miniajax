@@ -1,4 +1,6 @@
-# micro ajax
+# mini ajax
+
+A micro ajax module
 
 ## useage
 
